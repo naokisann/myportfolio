@@ -62,8 +62,8 @@
   {% for blog in blogs.all %}
   <div class="card mb-3">
     <div class="card-body">
-      <h3 class="card-title">{{ blog.title }}</h3>
-      <p class="card-text"></p>
+      <h3 class="card-title"><a href="{% url 'detail' blog.id %}">{{ blog.title }}</a></h3>
+      <p class="card-text">{{ blog.pub_date_pretty }}</p>
       <p class="card-text"><small class="text-muted">{{ blog.body }}</small></p>
     </div>
     {% if blog.image %}
